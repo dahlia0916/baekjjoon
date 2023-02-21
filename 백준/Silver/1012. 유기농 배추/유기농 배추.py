@@ -11,7 +11,6 @@ def dfs(y,x):
             dfs(ny,nx)
 
 T=int(sys.stdin.readline())
-s_l=[]
 for i in range(T):
     s=0
     M,N,K=map(int,sys.stdin.readline().split())
@@ -25,6 +24,4 @@ for i in range(T):
             if l[i2][j2]==1 and v[i2][j2] == 0:
                 dfs(i2,j2)
                 s=s+1
-    s_l.append(s)
-for i in range(len(s_l)):
-    print(s_l[i])
+    print(s)
